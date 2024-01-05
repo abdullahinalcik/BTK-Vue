@@ -20,10 +20,28 @@ const routes = [
     name: 'students',
     component: () => import('../views/Students.vue')
   },
+  // ! pros true yaparak ilgili yerde props id olarak çağırabileceğiz
   {
     path: '/students/:id',
     name: 'studentInfo',
-    component: () => import('../views/StudentInfo.vue')
+    component: () => import('../views/StudentInfo.vue'),
+    props:true
+
+  },
+  // ! path e manuel onalarak student yazılırsa students e yönlendirme yapacağız
+  {
+    path: '/student',
+    redirect:'/students'
+
+
+  },
+  // !notfound sayfası diğer path istekleri için
+  {
+    path: '/:catchAll(.*)',
+    name: 'notFound',
+    component: () => import('../views/NotFound.vue'),
+    props:true
+
   },
 ]
 
