@@ -1,7 +1,7 @@
 <template>
-    <div @click="clean">
+    <div @click.="cleanCopmonentteki" @click.shift="cleanCopmonentShift">
         <h3>
-            Temizle
+            Aşağıdaki İnput u Temizle
         </h3>
     </div>
   
@@ -15,15 +15,23 @@ export default {
         }
     },
     methods: {
-        clean(){
+        cleanCopmonentteki(){
+            this.$emit("clean2")
+
+        },
+        cleanCopmonentShift(){
             this.$emit("clean")
 
-        }
+        },
     },
 
 }
 </script>
 
-<style>
+<style scoped>
+h3{
+    cursor: pointer;
+    color: black;
+}
 
 </style>
