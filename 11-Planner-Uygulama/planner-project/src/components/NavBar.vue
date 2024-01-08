@@ -17,6 +17,7 @@ nav a {
   margin-left: 1rem;
   padding: 4px;
   font-size: 1.5rem;
+  
   &:hover {
 
   color: tomato;

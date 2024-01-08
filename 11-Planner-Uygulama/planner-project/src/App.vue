@@ -1,25 +1,22 @@
 <template>
-    <NavBar/>
-  <router-view/>
+  <NavBar />
+  <router-view />
 </template>
 <script>
-import NavBar from "./components/NavBar.vue"
+import NavBar from "./components/NavBar.vue";
 
-
-export default{
-  components:{
-    NavBar
-
-  }
-}
-
+export default {
+  components: {
+    NavBar,
+  },
+};
 </script>
 
 
 
 
 <style>
-body{
+body {
   background: #f2f2f2;
 }
 #app {
@@ -41,5 +38,6 @@ nav a {
 
 nav a.router-link-exact-active {
   color: #42b983;
+  border-bottom: solid .1rem #42b983;
 }
 </style>
